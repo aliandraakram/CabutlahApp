@@ -1,64 +1,39 @@
 package com.bangkit.cabutlahapp
 
+import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.bangkit.cabutlahapp.retrofit.ApiConfig
+import com.bangkit.cabutlahapp.retrofit.MapResponse
+import com.bangkit.cabutlahapp.retrofit.ResultsItem
+import com.google.android.gms.maps.model.LatLng
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ParserPlace {
-    fun parse(jObject: JSONObject): List<HashMap<String, String>>? {
-        var jPlaces : JSONArray? = null
-        try {
-            jPlaces = jObject.getJSONArray("results")
+    /*fun getNearbyPlaces(location: LatLng, type: String, key: String): LiveData<List<ResultsItem>> {
+        val result = MutableLiveData<List<ResultsItem>>()
+        val getData = ApiConfig.getApiService().getPlaces("json",location, type, 500, key)
 
-        }catch (e:JSONException)
-        {
-            e.printStackTrace()
-        }
-        return getPlaces(jPlaces)
-    }
-
-    private fun getPlaces(jPlaces: JSONArray?): List<HashMap<String, String>>? {
-        val placesCount =jPlaces!!.length()
-        val placeList: MutableList<HashMap<String, String>>? =
-                ArrayList()
-        var place : HashMap<String, String>? = null
-        for (i in 0 until placesCount){
-            try {
-                place = getPlace(jPlaces[i] as JSONObject)
-                if (place != null) {
-                    placeList?.add(place)
+        getData.enqueue(object : Callback<MapResponse> {
+            override fun onResponse(call: Call<MapResponse>, response: Response<MapResponse>) {
+                if (response.isSuccessful) {
+                    result.postValue(response.body()!!.results)
                 }
-            }catch (e:JSONException){
-                e.printStackTrace()
-            }
-        }
-        return placeList
-    }
-
-    private fun getPlace(jsonObject: JSONObject): HashMap<String, String>? {
-        val place = HashMap<String, String>()
-        var placeName = "-NA-"
-        var vicinity ="-NA-"
-        var latitude = ""
-        var longitude= ""
-        try {
-            if (!jsonObject.isNull("name")){
-                placeName =jsonObject.getString("name")
 
             }
-            if(!jsonObject.isNull("vicinity")){
-                vicinity =jsonObject.getString(vicinity)
+
+            override fun onFailure(call: Call<MapResponse>, t: Throwable) {
+                Log.d("getNearbyPlaces", t.message.toString())
             }
-            latitude =jsonObject.getJSONObject("geometry").getJSONObject("location").getString("lat")
-            longitude = jsonObject.getJSONObject("geometry").getJSONObject("location").getString("lng")
-            place["place_name"] = placeName
-            place["vicinity"] = vicinity
-            place["lat"] = latitude
-            place["lng"] = longitude
-        }catch (e: JSONException
-        ){
-            e.printStackTrace()
-        }
-return  place
-    }
+        })
+
+        return result
+    }*/
+
+
 }

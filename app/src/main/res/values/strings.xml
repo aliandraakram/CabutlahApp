@@ -13,19 +13,14 @@
     <string name="confirm_password">Confirm password</string>
     <string name="email">email</string>
     <string name="holiday">Holiday</string>
+    <string name="browser_api">AIzaSyCSnO1yGSqsxR1gaO-Cl_EaBjnJ0YQP9Go</string>
 
     <string-array name="nearby_location">
         <item>--Nearby Location--</item>
         <item>Restaurant</item>
-        <item>Fasilitas Olahraga</item>
-        <item>Gedung Seni</item>
+        <item>Art Gallery</item>
         <item>Museum</item>
-        <item>Taman</item>
-        <item>Balai Kota</item>
-        <item>Taman</item>
-        <item>Stasiun Kereta Api</item>
-        <item>Trans Jakarta</item>
-
-
+        <item>Amusement Park</item>
+        <item>Hospital</item>
     </string-array>
 </resources>

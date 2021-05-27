@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
@@ -15,7 +16,7 @@ import java.lang.Math.abs
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
     private lateinit var viewPager2: ViewPager2
-    private val sliderHandler = Handler()
+    private val sliderHandler = Handler(Looper.getMainLooper())
     companion object{
         const val EMAIL = "email"
     }
