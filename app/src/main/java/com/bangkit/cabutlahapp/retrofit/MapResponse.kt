@@ -5,137 +5,137 @@ import com.google.gson.annotations.SerializedName
 data class MapResponse(
 
 	@field:SerializedName("next_page_token")
-	val nextPageToken: String? = null,
+	val nextPageToken: String,
 
 	@field:SerializedName("html_attributions")
-	val htmlAttributions: List<Any?>? = null,
+	val htmlAttributions: List<Any>,
 
 	@field:SerializedName("results")
-	val results: List<ResultsItem?>? = null,
+	val results: List<ResultsItem>,
 
 	@field:SerializedName("status")
-	val status: String? = null
+	val status: String
 )
 
 data class PlusCode(
 
 	@field:SerializedName("compound_code")
-	val compoundCode: String? = null,
+	val compoundCode: String,
 
 	@field:SerializedName("global_code")
-	val globalCode: String? = null
+	val globalCode: String
 )
 
 data class OpeningHours(
 
 	@field:SerializedName("open_now")
-	val openNow: Boolean? = null
+	val openNow: Boolean
 )
 
 data class Geometry(
 
 	@field:SerializedName("viewport")
-	val viewport: Viewport? = null,
+	val viewport: Viewport,
 
 	@field:SerializedName("location")
-	val location: Location? = null
+	val location: Location
 )
 
 data class Southwest(
 
 	@field:SerializedName("lng")
-	val lng: Double? = null,
+	val lng: Double,
 
 	@field:SerializedName("lat")
-	val lat: Double? = null
+	val lat: Double
 )
 
 data class Viewport(
 
 	@field:SerializedName("southwest")
-	val southwest: Southwest? = null,
+	val southwest: Southwest,
 
 	@field:SerializedName("northeast")
-	val northeast: Northeast? = null
+	val northeast: Northeast
 )
 
 data class Northeast(
 
 	@field:SerializedName("lng")
-	val lng: Double? = null,
+	val lng: Double,
 
 	@field:SerializedName("lat")
-	val lat: Double? = null
+	val lat: Double
 )
 
 data class ResultsItem(
 
 	@field:SerializedName("types")
-	val types: List<String?>? = null,
+	val types: List<String>,
 
 	@field:SerializedName("business_status")
-	val businessStatus: String? = null,
+	val businessStatus: String,
 
 	@field:SerializedName("icon")
-	val icon: String? = null,
+	val icon: String,
 
 	@field:SerializedName("rating")
-	val rating: Double? = null,
+	val rating: Double,
 
 	@field:SerializedName("photos")
-	val photos: List<PhotosItem?>? = null,
+	val photos: List<PhotosItem>,
 
 	@field:SerializedName("reference")
-	val reference: String? = null,
+	val reference: String,
 
 	@field:SerializedName("user_ratings_total")
-	val userRatingsTotal: Int? = null,
+	val userRatingsTotal: Int,
 
 	@field:SerializedName("price_level")
-	val priceLevel: Int? = null,
+	val priceLevel: Int,
 
 	@field:SerializedName("scope")
-	val scope: String? = null,
+	val scope: String,
 
 	@field:SerializedName("name")
-	val name: String? = null,
+	val name: String,
 
 	@field:SerializedName("opening_hours")
-	val openingHours: OpeningHours? = null,
+	val openingHours: OpeningHours,
 
 	@field:SerializedName("geometry")
-	val geometry: Geometry? = null,
+	val geometry: Geometry,
 
 	@field:SerializedName("vicinity")
-	val vicinity: String? = null,
+	val vicinity: String,
 
 	@field:SerializedName("plus_code")
-	val plusCode: PlusCode? = null,
+	val plusCode: PlusCode,
 
 	@field:SerializedName("place_id")
-	val placeId: String? = null
+	val placeId: String
 )
 
 data class PhotosItem(
 
 	@field:SerializedName("photo_reference")
-	val photoReference: String? = null,
+	val photoReference: String,
 
 	@field:SerializedName("width")
-	val width: Int? = null,
+	val width: Int,
 
 	@field:SerializedName("html_attributions")
-	val htmlAttributions: List<String?>? = null,
+	val htmlAttributions: List<String>,
 
 	@field:SerializedName("height")
-	val height: Int? = null
+	val height: Int
 )
 
 data class Location(
 
 	@field:SerializedName("lng")
-	val lng: Double? = null,
+	val lng: Double,
 
 	@field:SerializedName("lat")
-	val lat: Double? = null
+	val lat: Double
 )

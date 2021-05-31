@@ -138,9 +138,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
             .observe(this, {
                 if (it != null) {
                     if (it.status != "ZERO_RESULTS") {
-                        for (i in it.result.indices) {
+                        for (i in it.results.indices) {
                             val markerOptions = MarkerOptions()
-                            val item = it.result[i]
+                            val item = it.results[i]
 
                             val lat = item.geometry.location.lat
                             val long = item.geometry.location.lng
