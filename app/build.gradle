@@ -63,6 +63,7 @@ dependencies {
     //Libraries
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
     implementation 'com.google.firebase:firebase-database:20.0.0'
+    implementation 'com.google.firebase:firebase-database-ktx'
     implementation 'com.google.firebase:firebase-core:19.0.0'
     implementation 'com.karumi:dexter:5.0.0'
     implementation 'com.firebaseui:firebase-ui-database:4.3.1'

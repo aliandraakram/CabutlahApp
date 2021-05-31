@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.bangkit.cabutlahapp.retrofit.ApiConfig
 import com.bangkit.cabutlahapp.retrofit.MapResponse
-import com.bangkit.cabutlahapp.retrofit.ResultsItem
 import com.google.android.gms.maps.model.LatLng
 import org.json.JSONArray
 import org.json.JSONException
